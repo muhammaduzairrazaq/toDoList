@@ -304,5 +304,6 @@
     "yallist": "^4.0.0",
     "yargs-parser": "^20.2.9",
     "yocto-queue": "^0.1.0"
-  }
+  },
+  "main": "webpack.config.js"
 }
