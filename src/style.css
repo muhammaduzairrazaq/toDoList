@@ -41,6 +41,10 @@ input:focus {
   width: 100%;
 }
 
+.task:focus {
+  background-color: rgb(255, 255, 202);
+}
+
 .italic {
   font-style: italic;
 }
@@ -49,9 +53,25 @@ input:focus {
   color: #9e9e9e;
 }
 
+li span.rows i.fa-trash {
+  display: none;
+}
+
+li span.rows input.task:focus + i.fa-trash {
+  display: inline;
+}
+
+li span.rows input.task:focus ~ i.fa-ellipsis-vertical {
+  display: none;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+
 ul li {
   list-style: none;
-
 }
 
 ul {
