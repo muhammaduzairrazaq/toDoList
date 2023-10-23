@@ -42,7 +42,7 @@ input:focus {
 }
 
 .task:focus {
-  background-color: rgb(255, 255, 202);
+  background-color: lightyellow;
 }
 
 .italic {
