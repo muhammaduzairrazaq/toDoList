@@ -29,7 +29,7 @@
     "hint": "^2.0.0",
     "html-webpack-plugin": "^5.5.3",
     "style-loader": "^3.3.3",
-    "stylelint": "^15.10.3",
+    "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-csstree-validator": "^3.0.0",
     "stylelint-scss": "^5.2.1",

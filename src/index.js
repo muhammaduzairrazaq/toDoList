@@ -28,6 +28,7 @@ function showTasks() {
         <i class="fa-solid fa-trash dull trash-icon"></i>
       </span>
     `;
+
       list.appendChild(listItem);
       const checkbox = listItem.querySelector('input[type="checkbox"]');
       const taskText = listItem.querySelector('.task');
