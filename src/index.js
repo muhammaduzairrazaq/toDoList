@@ -1,7 +1,13 @@
 import './style.css';
 import toggleTaskStatus from './status';
 
-let toDoTasks = [];
+let toDoTasks = [
+  {
+    description: 'Car Wash',
+    completed: false,
+    index: 1,
+  },
+];
 
 const storeLocalStorage = () => {
   const tasksJson = JSON.stringify(toDoTasks);
@@ -17,6 +23,9 @@ const restoreLocalStorage = () => {
 function showTasks() {
   const list = document.querySelector('.list');
   list.innerHTML = '';
+  if (toDoTasks.length <= 0) {
+    storeLocalStorage();
+  }
   toDoTasks = restoreLocalStorage();
   toDoTasks.forEach((task, index) => {
     if (task.completed === false) {
@@ -35,7 +44,13 @@ function showTasks() {
       const trashIcon = listItem.querySelector('.trash-icon');
 
       checkbox.addEventListener('change', () => {
-        toggleTaskStatus(toDoTasks, index, taskText, storeLocalStorage, showTasks);
+        toggleTaskStatus(
+          toDoTasks,
+          index,
+          taskText,
+          storeLocalStorage,
+          showTasks,
+        );
       });
 
       trashIcon.addEventListener('click', () => {
@@ -47,7 +62,6 @@ function showTasks() {
       taskText.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
           const taskDescription = taskText.value.trim();
-          alert(taskDescription);
           if (taskDescription === '') {
             alert('Please enter a task.');
           }
